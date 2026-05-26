@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: #030712;
+    color: #e2e8f0;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+    cursor: none;
+  }
+  ::selection { background: rgba(124,58,237,0.3); color: #fff; }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #030712; }
+  ::-webkit-scrollbar-thumb { background: #7c3aed; border-radius: 2px; }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.07);
+  }
+  .glass-strong {
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(30px);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .grad-text {
+    background: linear-gradient(135deg, #7c3aed, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .grad-text-2 {
+    background: linear-gradient(135deg, #a855f7, #22d3ee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .glow-violet { box-shadow: 0 0 30px rgba(124,58,237,0.4); }
+  .glow-cyan { box-shadow: 0 0 30px rgba(6,182,212,0.4); }
+  .border-grad {
+    border: 1px solid transparent;
+    background: linear-gradient(#0c1530, #0c1530) padding-box,
+                linear-gradient(135deg, #7c3aed, #06b6d4) border-box;
+  }
+  .neon-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #7c3aed, #06b6d4, transparent);
+  }
+  .font-display { font-family: 'Syne', sans-serif; }
+  .font-mono { font-family: 'JetBrains Mono', monospace; }
+}
